@@ -5,4 +5,10 @@ async function buscarDadosPorId(){
     console.log(dados);
 }
     
-buscarDadosPorId();
+async function remove(){
+    const dados = await crud.remove("pessoas", "PM9N2hBau4VJGsB5TfOe");
+    console.log(dados);
+}
+
+
+remove();

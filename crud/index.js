@@ -8,7 +8,8 @@ const {
     query,
     where,
     getDocs,
-    getDoc
+    getDoc, 
+    deleteDoc
 } = require('firebase/firestore/lite');
 
 
@@ -72,6 +73,13 @@ async function getById(nomeTabela, id) {
     } else {
         return new Error("Not found!")
     }
+}
+
+async function remove(nomeTabela, id) {
+   const dado = await deleteDoc(doc(db, nomeTabela, id));
+   return {
+    message:`${id} deleted` 
+   }
 }
 
 module.exports = {
