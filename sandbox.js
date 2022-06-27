@@ -6,7 +6,7 @@ async function buscarDadosPorId(){
 }
     
 async function remove(){
-    const dados = await crud.remove("pessoas", "PM9N2hBau4VJGsB5TfOe");
+    const dados = await crud.remove("pessoas");
     console.log(dados);
 }
 
